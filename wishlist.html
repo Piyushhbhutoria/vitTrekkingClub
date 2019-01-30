@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Wishlist | VIT Tekking CLub</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel=icon href="images/favicon.png ">
+	<meta name='viewport' content="width=device-width, height=device-height, initial-scale=1">
+	<meta charset="utf-8" />
+	<style type="text/css">
+		h1{
+			padding: 100px 0 0 100px;
+		}
+		@media only screen and (max-width: 420px){
+			#fil{
+				font-size: 40px;
+			}
+			h1{
+				padding: 20px 0 0 20px;
+				font-size: 20px;
+			}
+		}
+	</style>
+</head>
+<body style="height: 100%;">
+	<div id="ham">
+		<div class="navi" style="background-color: #FF4081;">
+		<a href="index.html"><img src="../images/whitelogo.png" id="no"></a><strong>VTC</strong>
+			<span id="menu">CLOSE
+				<button class="hamburger hamburger--squeeze is-active" type="button" id="check">
+				<span class="hamburger-box">
+					<span class="hamburger-inner is-active"></span>
+				</span>
+				</button>
+			</span>
+		</div>
+		<div id="menucon">
+			<ul>
+				<li><a href=index.html>Home</a></li>
+				<li><a href=blog.html>Blog</a></li>
+				<li><a href=events.html>Events</a></li>
+				<li><a href=register.html>Register</a></li>
+				<!--<li><a href=../gallery.html>Gallery</a></li>-->
+				<li><a href=wishlist.html>Wishlist</a></li>
+				<li><a href=aboutus.html>About Us</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="navi" id="nav" style="background-color: #eaeaea;">
+		<span id="hid"><a href="index.html"><img src="../images/logo.png" id="no"></a><strong>VTC</strong></span>
+			<span id="menu" class="hor">MENU
+				<button class="hamburger hamburger--squeeze" type="button" id="check">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+				</button>
+			</span>
+	</div>
+	<div id="virt" style="background-color: #eaeaea; min-height: 700px">
+		<div id="fil" style="height: initial;">Trek Wishlist</div>
+		<div class="wrap" id="wrap3" style=" text-align: center; margin: 0">
+			<h1>Enter the place you wish to visit for the next Trek</h1>
+				<input type="text" id="place" style="border-radius: 10px;outline: none; height: 30px; padding-left: 10px; width: 250px; font-size: 20px" placeholder="example: Jawadhu Hills">
+				<input type="button" value="Submit" id="sub">
+		</div>
+		<div class="footer whole-content-wrapper">
+			<div class="social-logos">
+				<ul>
+					<li class="facebook-logo"><a target="_blank" href="https://www.facebook.com/VitTrekkingClub"  class="no"><img src="images/facebook.png" alt="facebook-icon"></a></li>
+					<li class="twitter-logo"><a target="_blank" href="https://www.instagram.com/vittrekkingclub/"  class="no"><img src="images/insta.png" alt="facebook-icon"></a></li>
+					<li class="linkedin-logo"><a href="mailto:contact@VitTrekkingClub.com" class="no"><img src="images/mail.png" alt="linkedin-icon"></a></li>
+				</ul>
+			</div>
+			<div class="footer-copyright"><h3>VIT Trekking Club</h3> &#169 2018</div>
+		</div>
+	</div>	
+</body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#sub').click(function(){
+				if(!($('input:text').val()))
+					alert("Please enter a place first");
+				else{
+					$('h1').html('Thanks!<br>We will consider your opinion too!');
+					$('input').fadeOut();
+				}
+				});
+			});
+	</script>
+	<script type="text/javascript" src=scripts/script.js></script>
